@@ -253,7 +253,7 @@ model = LinearRegression(n_jobs=-1) # best precision
 
 
 ## TRAINING
-print("\nTrainning model")
+print("\nModel training")
 start = time.perf_counter()
 history = model.fit(
     X_train, Y_train,)
@@ -287,19 +287,19 @@ print('FINAL RMSE:', root_mean_squared_error(Y_test, Y_predict), '\n')
 ## PLOT RANDOM PREDICTIONS
 fig, ax = plt.subplots(2, 4, figsize=(16, 7))
 
-for idx, i in enumerate([27, 40, 120, 400]):
+for idx, i in enumerate([31, 47, 122, 400]):
     plt.subplot(241 + 2*idx)
     cax_heat = plt.imshow(Y_test[i].reshape((Nx, Ny)).T, cmap='plasma', interpolation='nearest')
-    plt.title('Champ réel')
-    plt.xlabel("Axe x")
-    plt.ylabel("Axe y")
+    plt.title('Real heat field')
+    plt.xlabel("X axis")
+    plt.ylabel("Y axis")
     plt.colorbar(cax_heat)
 
     plt.subplot(242 + 2*idx)
     cax_heat = plt.imshow(Y_predict[i].reshape((Nx, Ny)).T, cmap='plasma', interpolation='nearest')
-    plt.title('Champ prédit')
-    plt.xlabel("Axe x")
-    plt.ylabel("Axe y")
+    plt.title('Predicted heat field')
+    plt.xlabel("X axis")
+    plt.ylabel("Y axis")
     plt.colorbar(cax_heat)
 
 plt.show()
