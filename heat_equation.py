@@ -321,8 +321,8 @@ exe_time_mod = np.array(timeit.repeat('model.predict(f.reshape(1, -1))', globals
 strings = ['inversion: ', 'solve :    ', 'sparse :   ', 'model :    ']
 times = [exe_time_inv, exe_time_sol, exe_time_spa, exe_time_mod]
 
-for str, tim in zip(strings, times):
-    print(f"Execution time {str}: {(np.mean(tim)/1e-3):.3f} ms, variance : {(np.var(tim)/1e-9):.2f} ns")
+for string, tim in zip(strings, times):
+    print(f"Execution time {string}: {(np.mean(tim)/1e-3):.3f} ms, variance : {(np.var(tim)/1e-9):.2f} ns")
 print("")
 
 
