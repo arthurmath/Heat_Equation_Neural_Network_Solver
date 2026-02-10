@@ -1,4 +1,4 @@
-# Heat_Equation_Neural_Network_Solver
+# Heat Equation Neural Network Solver
 
 Python program solving Heat equation with a Neural Network. It begins with the creation of an artificial database. On a 2D square domain, we create up to ten heat sources randomly placed and with random values. We create the associated heat field by computing the finite elements matrix and then solving the system with a classical library (Scipy sparse). We have at the end two lists of matrices, X which contains heats flux on the domain, and Y which contains heat field solutions. 
 
